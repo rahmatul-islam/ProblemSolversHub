@@ -1,6 +1,5 @@
-
-
-import java.util.Scanner;
+package codeforces;
+import  java.util.Scanner;
 
 public class cf231 {
     public static void main(String[] args) {
