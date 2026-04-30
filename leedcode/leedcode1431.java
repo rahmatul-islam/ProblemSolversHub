@@ -1,12 +1,13 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class leedcode1431 {
     public static void main(String[]args){
         int[] candies = {2,3,5,1,3};
         int extraCandies = 3;
-        boolean []ans=new boolean[candies.length];
-        ans=Solution.kidsWithCandies(candies, extraCandies);
-        System.out.println(Arrays.toString(ans));
+        List<Boolean> ans = Solution.kidsWithCandies(candies, extraCandies);
+        System.out.println(ans);
 
 
     }
@@ -14,22 +15,18 @@ public class leedcode1431 {
 }
 
 class Solution {
-    public static boolean[] kidsWithCandies(int[] candies, int extraCandies) {
+    public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 
-        boolean[] result = new boolean[candies.length];
-        int max = 0;
-        for (int i = 0; i < candies.length; i++) {
-            if (candies[i] > max) {
-                max = candies[i];
-            }
-        }
+        List<Boolean> result = new ArrayList<>();
+        int max =Arrays.stream(candies).max().getAsInt();
+          
 
         for (int i = 0; i < candies.length; i++) {
             if ((candies[i] + extraCandies) >= max) {
-                result[i] = true;
+                result.add(true);
 
             } else {
-                result[i] = false;
+                result.add(false);
             }
 
         }
