@@ -5,12 +5,12 @@ public class leedcode1389 {
     public static void main(String[] args) {
         int [] nums={0,1,2,3,4};
         int [] index={0,1,2,2,1};
-        int result[]=Solution.createTargetArray(nums, index);
+        int result[]=createTargetArray(nums, index);
         System.out.println(Arrays.toString(result));
     }
     
 }
-class Solution {
+
     public static int[] createTargetArray(int[] nums, int[] index) {
          List<Integer>ans=new  ArrayList<>();
 
@@ -25,4 +25,6 @@ class Solution {
         return result;
         
     }
+
+void main() {
 }

@@ -28,7 +28,7 @@ class Solution {
             }
         }
 
-        return nums[al];
+        return nums[l];
         
     }
 }
